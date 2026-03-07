@@ -122,11 +122,13 @@ nav {
 .hero-tag {
   font-family:'DM Mono',monospace; font-size:9px;
   letter-spacing:0.14em; text-transform:uppercase;
-  color:var(--text); border:1px solid var(--mid);
-  padding:5px 12px; background:rgba(255,255,255,0.45);
+  color:var(--muted); border:1px solid var(--rule);
+  padding:5px 12px; background:transparent;
 }
-.hero-tag.filled  { background:var(--coral); color:var(--white); border-color:var(--coral); }
-.hero-tag.teal    { background:var(--teal);   color:var(--white); border-color:var(--teal);   }
+.hero-tag.filled  { color:var(--accent); border-color:var(--accent); background:transparent; }
+.hero-tag.teal    { color:var(--black);  border-color:rgba(0,0,0,0.3); background:transparent; }
+.hero-tag.coral   { color:var(--coral);  border-color:var(--coral); background:transparent; }
+.hero-tag.amber   { color:rgb(171,110,45); border-color:rgb(171,110,45); background:transparent; }
 
 .hero-ctas { display:flex; gap:12px; flex-wrap:wrap; }
 
@@ -737,8 +739,8 @@ footer::before {
       <div class="hero-tags">
         <span class="hero-tag filled">Platform Thinker</span>
         <span class="hero-tag teal">Org Builder</span>
-        <span class="hero-tag">Zero-to-One</span>
-        <span class="hero-tag">Fintech &amp; Tax SaaS</span>
+        <span class="hero-tag coral">Zero-to-One</span>
+        <span class="hero-tag amber">Fintech &amp; Tax SaaS</span>
       </div>
       <div class="hero-ctas">
         <a href="#thinking" class="btn-primary">See My Work</a>
