@@ -26,7 +26,8 @@
   --bg:         rgb(234,229,229);  /* color_11 site warm bg */
   --white:      rgb(255,255,255);
   --black:      rgb(0,0,0);
-  --accent:     rgb(232,53,86);    /* color_18 coral red */
+  --accent:     rgb(64,138,141);   /* PRIMARY — teal */
+  --coral:      rgb(232,53,86);    /* SECONDARY — coral */
   --teal:       rgb(64,138,141);   /* color_43 */
   --teal-light: rgb(133,204,204);  /* color_9  */
   --teal-bg:    rgba(64,138,141,0.06);
@@ -124,8 +125,12 @@ nav {
   color:var(--text); border:1px solid var(--mid);
   padding:5px 12px; background:rgba(255,255,255,0.45);
 }
-.hero-tag.filled  { background:var(--accent); color:var(--white); border-color:var(--accent); }
-.hero-tag.teal    { background:var(--teal);   color:var(--white); border-color:var(--teal);   }
+.hero-tag.filled  { color:var(--accent); border-color:var(--accent); background:transparent; }
+.hero-tag.teal    { color:var(--teal); border-color:var(--teal); background:transparent; }
+.hero-tag.dark    { color:rgb(77,77,77); border-color:rgb(77,77,77); background:transparent; }
+.hero-tag.coral   { color:rgb(232,53,86); border-color:rgb(232,53,86); background:transparent; }
+.hero-tag.amber   { color:rgb(171,110,45); border-color:rgb(171,110,45); background:transparent; }
+
 
 .hero-ctas { display:flex; gap:12px; flex-wrap:wrap; }
 
@@ -570,8 +575,8 @@ footer::before {
         and the teams and practices that sustain them.
       </p>
       <div class="hero-tags">
-        <span class="hero-tag filled">Platform Thinker</span>
-        <span class="hero-tag teal">Org Builder</span>
+        <span class="hero-tag teal">Platform Thinker</span>
+        <span class="hero-tag dark">Org Builder</span>
         <span class="hero-tag coral">Zero-to-One</span>
         <span class="hero-tag amber">Fintech &amp; Tax SaaS</span>
       </div>
