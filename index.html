@@ -523,6 +523,14 @@ footer::before {
 /* ── FADE-IN ── */
 .fade { opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease; }
 .fade.in { opacity:1; transform:translateY(0); }
+
+#board { background:var(--bg); padding:100px 80px; border-top:1px solid var(--rule); }
+.board-inner { max-width:1120px; margin:0 auto; }
+.board-header { margin-bottom:48px; }
+.board-title { font-family:"Cormorant Garamond",serif; font-size:38px; font-weight:300; color:var(--black); margin:8px 0 12px; line-height:1.2; }
+.board-intro { font-family:"DM Sans",sans-serif; font-size:14px; font-weight:300; color:var(--muted); margin:0; }
+@media (max-width:768px) { #board { padding:64px 24px; } }
+
 </style>
 </head>
 <body>
@@ -736,6 +744,31 @@ footer::before {
 <!-- ═══════════════════════════════════════
      FOOTER
 ════════════════════════════════════════ -->
+
+<section id="board">
+  <div class="board-inner">
+    <div class="board-header">
+      <div class="section-eyebrow">Additional Experience</div>
+      <h2 class="board-title">Board &amp; Civic Leadership</h2>
+      <p class="board-intro">Governance and community leadership roles held alongside professional career.</p>
+    </div>
+    <div class="board-rows">
+      <div class="exp-row">
+        <div><div class="exp-when">Sep 2021 – Present</div><div class="exp-co">1302 R Condominium</div></div>
+        <div><div class="exp-title-row"><span class="exp-title">Board Member</span><span class="exp-desc">Governance &amp; Operations</span></div><div class="exp-tagline">Fiduciary oversight, budget governance, and community operations for a residential condominium association in Washington, DC.</div><div class="exp-chips"><span class="exp-chip">Fiduciary oversight</span><span class="exp-chip">Budget governance</span><span class="exp-chip">Stakeholder management</span></div></div>
+      </div>
+      <div class="exp-row">
+        <div><div class="exp-when">Jan 2021 – Dec 2023</div><div class="exp-co">ANC 2F</div></div>
+        <div><div class="exp-title-row"><span class="exp-title">Committee Member</span><span class="exp-desc">Community Development</span></div><div class="exp-tagline">Advising on zoning, development proposals, and community planning for Advisory Neighborhood Commission 2F in Washington, DC.</div><div class="exp-chips"><span class="exp-chip">Civic advocacy</span><span class="exp-chip">Zoning &amp; development</span><span class="exp-chip">Public stakeholder engagement</span></div></div>
+      </div>
+      <div class="exp-row">
+        <div><div class="exp-when">Jan 2018 – Jun 2021</div><div class="exp-co">Wisteria Mansion</div></div>
+        <div><div class="exp-title-row"><span class="exp-title">Board Member</span><span class="exp-desc">Governance &amp; Strategy</span></div><div class="exp-tagline">Board-level governance and strategic oversight. Led vendor management, financial planning, and long-term capital improvements.</div><div class="exp-chips"><span class="exp-chip">Strategic planning</span><span class="exp-chip">Vendor management</span><span class="exp-chip">Capital planning</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer id="footer">
   <div class="footer-grid">
     <div>
