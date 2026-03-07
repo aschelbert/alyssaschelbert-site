@@ -655,6 +655,42 @@ footer::before {
   .stat-label { font-size: 10px; }
 }
 
+
+/* ── Board & Civic Experience ──────────────────────────── */
+#board {
+  background: var(--bg);
+  padding: 100px 80px;
+  border-top: 1px solid var(--rule);
+}
+.board-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+.board-header {
+  margin-bottom: 48px;
+}
+.board-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 38px;
+  font-weight: 300;
+  color: var(--black);
+  margin: 8px 0 12px;
+  line-height: 1.2;
+}
+.board-intro {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  #board { padding: 64px 24px; }
+  .board-title { font-size: clamp(24px, 6vw, 34px); }
+}
+
 </style>
 </head>
 <body>
@@ -670,6 +706,7 @@ footer::before {
     <li><a href="#about">About</a></li>
     <li><a href="#thinking">Work</a></li>
     <li><a href="#experience">Experience</a></li>
+    <li><a href="#board">Board</a></li>
     <li><a href="#footer">Contact</a></li>
   </ul>
 </nav>
@@ -864,6 +901,120 @@ footer::before {
         <div><div class="exp-when">Jul 2018 – Dec 2019</div><div class="exp-co">WR Grace</div></div>
         <div><div class="exp-title-row"><span class="exp-title">Investor Relations Manager</span><span class="exp-desc">Equity Product Strategy</span></div><div class="exp-tagline">$1M budget · 18% YoY volatility reduction · $6B equity fund</div><div class="exp-chips"><span class="exp-chip">IR website product owner</span><span class="exp-chip">C-suite advisory</span></div></div>
       </div>
+      <div class="exp-row">
+        <div>
+          <div class="exp-when">Jan 2017 – Jul 2018</div>
+          <div class="exp-co">OCP North America</div>
+        </div>
+        <div>
+          <div class="exp-title-row">
+            <span class="exp-title">Investor Relations Specialist</span>
+            <span class="exp-desc">Digital Strategy &amp; Debt Products</span>
+          </div>
+          <div class="exp-tagline">Enterprise digital strategy and debt product marketing for OCP S.A. subsidiary, supporting a $2B debt offering and long-term investor engagement model.</div>
+          <div class="exp-chips">
+            <span class="exp-chip">Custom internal PMS</span>
+            <span class="exp-chip">$2B debt offering</span>
+            <span class="exp-chip">Forecasting tools</span>
+            <span class="exp-chip">Stakeholder buy-in</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-row">
+        <div>
+          <div class="exp-when">Aug 2012 – Dec 2016</div>
+          <div class="exp-co">American Capital</div>
+        </div>
+        <div>
+          <div class="exp-title-row">
+            <span class="exp-title">Investor Relations Analyst</span>
+            <span class="exp-desc">Digital Strategy &amp; Financial Products</span>
+          </div>
+          <div class="exp-tagline">Modernised 6 corporate websites to improve lead conversion, reduced marketing overhead 30%, and built KPI reporting infrastructure for a portfolio managing $80B+ AUM.</div>
+          <div class="exp-chips">
+            <span class="exp-chip">6 properties modernised</span>
+            <span class="exp-chip">30% overhead reduction</span>
+            <span class="exp-chip">$80B+ AUM portfolio</span>
+            <span class="exp-chip">KPI reporting</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     BOARD & CIVIC EXPERIENCE
+════════════════════════════════════════ -->
+<section id="board">
+  <div class="board-inner">
+    <div class="board-header">
+      <div class="section-eyebrow">Additional Experience</div>
+      <h2 class="board-title">Board & Civic Leadership</h2>
+      <p class="board-intro">Governance and community leadership roles held alongside professional career.</p>
+    </div>
+    <div class="board-rows">
+
+      <div class="exp-row">
+        <div>
+          <div class="exp-when">Sep 2021 – Present</div>
+          <div class="exp-co">1302 R Condominium</div>
+        </div>
+        <div>
+          <div class="exp-title-row">
+            <span class="exp-title">Board Member</span>
+            <span class="exp-desc">Governance &amp; Operations</span>
+          </div>
+          <div class="exp-tagline">Fiduciary oversight, budget governance, and community operations for a residential condominium association in Washington, DC.</div>
+          <div class="exp-chips">
+            <span class="exp-chip">Fiduciary oversight</span>
+            <span class="exp-chip">Budget governance</span>
+            <span class="exp-chip">Stakeholder management</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-row">
+        <div>
+          <div class="exp-when">Jan 2021 – Dec 2023</div>
+          <div class="exp-co">ANC 2F</div>
+        </div>
+        <div>
+          <div class="exp-title-row">
+            <span class="exp-title">Committee Member</span>
+            <span class="exp-desc">Community Development</span>
+          </div>
+          <div class="exp-tagline">Served on the Community Development committee for Advisory Neighborhood Commission 2F, advising on zoning, development proposals, and community planning in Washington, DC.</div>
+          <div class="exp-chips">
+            <span class="exp-chip">Civic advocacy</span>
+            <span class="exp-chip">Zoning &amp; development</span>
+            <span class="exp-chip">Public stakeholder engagement</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-row">
+        <div>
+          <div class="exp-when">Jan 2018 – Jun 2021</div>
+          <div class="exp-co">Wisteria Mansion</div>
+        </div>
+        <div>
+          <div class="exp-title-row">
+            <span class="exp-title">Board Member</span>
+            <span class="exp-desc">Governance &amp; Strategy</span>
+          </div>
+          <div class="exp-tagline">Board-level governance and strategic oversight for a residential property association. Led initiatives on vendor management, financial planning, and long-term capital improvements.</div>
+          <div class="exp-chips">
+            <span class="exp-chip">Strategic planning</span>
+            <span class="exp-chip">Vendor management</span>
+            <span class="exp-chip">Capital planning</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
