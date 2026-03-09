@@ -833,10 +833,12 @@ function filterCards(pillar, tab) {
   document.querySelectorAll('.case-card').forEach(card => {
     card.classList.toggle('visible', pillar === 'all' || card.dataset.pillar === pillar);
   });
+  gtag('event', 'filter_work', { category: pillar });
 }
 
 function openModal(id) {
   const c = cases[id]; if (!c) return;
+  gtag('event', 'view_case_study', { case_study: id, title: c.title, pillar: c.pillar });
   document.getElementById('mPillar').textContent = c.pillar;
   document.getElementById('mTitle').textContent  = c.title;
   const r = c.results.map(x=>`<div class="modal-result"><div class="modal-result-num">${x.num}</div><div class="modal-result-lbl">${x.label}</div></div>`).join('');
@@ -881,6 +883,50 @@ const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
 }, {threshold: 0.08});
 document.querySelectorAll('.fade').forEach(el => obs.observe(el));
+
+/* ── GA4 Event Tracking ── */
+
+// Nav link clicks
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', () => {
+    gtag('event', 'nav_click', { link_text: a.textContent.trim(), link_url: a.getAttribute('href') });
+  });
+});
+
+// Hero CTA buttons
+document.querySelectorAll('.hero-text a.btn-primary, .hero-text a.btn-ghost').forEach(a => {
+  a.addEventListener('click', () => {
+    gtag('event', 'cta_click', { link_text: a.textContent.trim(), link_url: a.getAttribute('href') });
+  });
+});
+
+// Footer contact clicks
+document.querySelectorAll('#footer a').forEach(a => {
+  a.addEventListener('click', () => {
+    const href = a.getAttribute('href') || '';
+    let method = 'other';
+    if (href.startsWith('mailto:')) method = 'email';
+    else if (href.startsWith('tel:')) method = 'phone';
+    else if (a.textContent.includes('linkedin') || a.textContent.includes('LinkedIn')) method = 'linkedin';
+    else if (href.includes('alyssaschelbert.com')) method = 'website';
+    gtag('event', 'contact_click', { method: method, link_text: a.textContent.trim() });
+  });
+});
+
+// Scroll depth tracking (25%, 50%, 75%, 100%)
+(function() {
+  const thresholds = [25, 50, 75, 100];
+  const fired = {};
+  window.addEventListener('scroll', function() {
+    const scrollPct = Math.round((window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100);
+    thresholds.forEach(t => {
+      if (scrollPct >= t && !fired[t]) {
+        fired[t] = true;
+        gtag('event', 'scroll_depth', { percent: t });
+      }
+    });
+  });
+})();
 </script>
 </body>
 </html>
