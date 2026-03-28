@@ -1,5 +1,3 @@
-import { next } from '@vercel/edge';
-
 const BLOCKED_COUNTRIES = ['RU', 'CN', 'IN'];
 
 export default function middleware(request) {
@@ -11,8 +9,6 @@ export default function middleware(request) {
       headers: { 'Content-Type': 'text/plain' },
     });
   }
-
-  return next();
 }
 
 export const config = {
